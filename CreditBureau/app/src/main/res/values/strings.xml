@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Credit Bureau</string>
+    <array name="arrCreditType">
+        <item>Debit</item>
+        <item>Blue Credit</item>
+        <item>Gold Credit</item>
+    </array>
+</resources>
