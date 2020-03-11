@@ -39,6 +39,7 @@ class LuPa {
         return won
     }
 
+    private 
     fun changeVal(index: Int){
         if (gameValuesArr[index] == 0){
             numOf1++
@@ -51,7 +52,7 @@ class LuPa {
 
     }
 
-    fun changeMultiVal(index: Int){
+    fun changeContiguos(index: Int){
         if (index == 0 ){
             changeVal(index)
             changeVal(index+1)
