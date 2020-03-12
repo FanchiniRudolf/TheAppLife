@@ -14,9 +14,12 @@ class LuPa {
     var won = false
         private set
 
+    var moveCounter = 0
+
     fun shuffleGame(){
         numOf1 = 0
         numOf0 = 0
+        moveCounter = 0
         won = false
         for (i in gameValuesArr.indices){
             if(Random.nextBoolean()){
@@ -31,6 +34,10 @@ class LuPa {
         if (numOf0 == 0 || numOf1 == 0){
             shuffleGame()
         }
+    }
+
+    fun getMoves(): Int {
+        return moveCounter
     }
 
     fun hasWon(): Boolean {
@@ -52,7 +59,8 @@ class LuPa {
 
     }
 
-    fun changeContiguos(index: Int){
+    fun changeContiguous(index: Int){
+        moveCounter++
         if (index == 0 ){
             changeVal(index)
             changeVal(index+1)

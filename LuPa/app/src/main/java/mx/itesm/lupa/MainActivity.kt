@@ -1,7 +1,6 @@
 package mx.itesm.lupa
 
-import android.app.Activity
-import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,6 +14,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        imageButton.setOnClickListener { view ->
+            //todo Launch new screen
+            val intAboutInfo = Intent(this, AboutActivity::class.java)
+            startActivity(intAboutInfo)
+            finish() //remove current int from stack
+        }
 
         Lupa.shuffleGame()
         setAllButtonsValue()
@@ -67,13 +73,13 @@ class MainActivity : AppCompatActivity() {
     //todo
     fun changeSingleButtonValue(v: View){
         when(v) {
-            button  -> Lupa.changeContiguos(0)
-            button2 -> Lupa.changeContiguos(1)
-            button3 -> Lupa.changeContiguos(2)
-            button4 -> Lupa.changeContiguos(3)
-            button5 -> Lupa.changeContiguos(4)
-            button6 -> Lupa.changeContiguos(5)
-            button7 -> Lupa.changeContiguos(6)
+            button  -> Lupa.changeContiguous(0)
+            button2 -> Lupa.changeContiguous(1)
+            button3 -> Lupa.changeContiguous(2)
+            button4 -> Lupa.changeContiguous(3)
+            button5 -> Lupa.changeContiguous(4)
+            button6 -> Lupa.changeContiguous(5)
+            button7 -> Lupa.changeContiguous(6)
         }
         setAllButtonsValue()
         checkForWin()
@@ -82,7 +88,7 @@ class MainActivity : AppCompatActivity() {
     fun checkForWin() {
         if (Lupa.hasWon()){
             blockButtons()
-            showMessage("¡Ganaste!")
+            showMessage("¡Ganaste! \nTus movimientos fueron: ${Lupa.getMoves() }")
         }
     }
 
