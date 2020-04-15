@@ -1,17 +1,32 @@
 package mx.itesm.rjfr.gpspractice
 
+import android.Manifest
+import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.provider.Settings
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
+import java.text.FieldPosition
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), LocationListener {
 
+    private val GPS_PERMIT: Int = 200
     private lateinit var gps: LocationManager
+    private lateinit var position: Location
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +37,70 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        configureGPS()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //Check for permit
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) ==
+            PackageManager.PERMISSION_GRANTED){
+            //have permit allowed
+            gps.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0f, this)
+            onLocationChanged(gps.getLastKnownLocation(LocationManager.NETWORK_PROVIDER))
+        } else{
+            //ask for permit
+            ActivityCompat.requestPermissions(this,
+                    arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), GPS_PERMIT)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        if (requestCode == GPS_PERMIT && grantResults.isNotEmpty()) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //Granted permit
+                if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) ==
+                        PackageManager.PERMISSION_GRANTED) {
+                    //have permit allowed
+                    gps.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0f, this)
+                    onLocationChanged(gps.getLastKnownLocation(LocationManager.NETWORK_PROVIDER))
+                }
+            } else {
+                    //Show Message on how to do it
+            }
+        }
+    }
+
+    private fun configureGPS() {
+        //create sensor gps admin
+        gps = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        if(!gps.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+            //open android settings
+            turnOnGPS()
+        }
+    }
+
+    private fun turnOnGPS() {
+        //user must turn it on app cannot do it
+        val dialoge = AlertDialog.Builder(this)
+        dialoge.setMessage("GPS is turned off, would you like to turn it on")
+                .setCancelable(false)
+                .setPositiveButton("Yes", object:DialogInterface.OnClickListener{
+                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                        startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                    }
+                })
+                .setNegativeButton("No", object:DialogInterface.OnClickListener{
+                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                        dialog?.dismiss()
+                    }
+                })
+        val alert = dialoge.create()
+        alert.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -38,5 +117,22 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onLocationChanged(location: Location?) {
+        if(location != null){
+            tvLatitude.setText("${location.latitude}")
+            tvLongitude.setText("${location.longitude}")
+            position = location
+        }
+    }
+
+    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
+    }
+
+    override fun onProviderEnabled(provider: String?) {
+    }
+
+    override fun onProviderDisabled(provider: String?) {
     }
 }
