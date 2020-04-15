@@ -8,18 +8,24 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
+import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.androidnetworking.AndroidNetworking
+import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONObjectRequestListener
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.json.JSONObject
 import java.text.FieldPosition
 
 class MainActivity : AppCompatActivity(), LocationListener {
@@ -33,10 +39,44 @@ class MainActivity : AppCompatActivity(), LocationListener {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        /*fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-        }
+        }*/
+        AndroidNetworking.initialize(this)
+
+    }
+
+    fun showMap (v: View){
+        val latitud = position.latitude
+        val longitude = position.longitude
+        val url = "https://www.google.com/maps/search/?api=1&query=$latitud,$longitude"
+        val intMap = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intMap)
+    }
+
+    fun downloadAddress(v: View) {
+        val latitud = position.latitude
+        val longitude = position.longitude
+        val address = "https://geocode.xyz/$latitud,$longitude?geoit=json"
+        AndroidNetworking.get(address)
+            .build()
+            .getAsJSONObject(object: JSONObjectRequestListener {
+                override fun onResponse(response: JSONObject?) {
+                    val  city = response?.getString("city")
+                    val cp = response?.getString("postal")
+                    val country = response?.getString("country")
+                    tvAddress.setText("$city, $cp, $country")
+
+                }
+
+                override fun onError(anError: ANError?) {
+                    println("******************************************************")
+                    println("error")
+                    println("******************************************************")
+                }
+
+            })
     }
 
     override fun onStart() {
@@ -57,6 +97,11 @@ class MainActivity : AppCompatActivity(), LocationListener {
             ActivityCompat.requestPermissions(this,
                     arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), GPS_PERMIT)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        gps.removeUpdates(this)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -126,6 +171,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
             position = location
         }
     }
+
 
     override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
     }
