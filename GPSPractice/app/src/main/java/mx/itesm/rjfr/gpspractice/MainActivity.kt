@@ -66,7 +66,9 @@ class MainActivity : AppCompatActivity(), LocationListener {
                     val  city = response?.getString("city")
                     val cp = response?.getString("postal")
                     val country = response?.getString("country")
-                    tvAddress.setText("$city, $cp, $country")
+                    val street = response?.getString("staddress")
+                    val street_number = response?.getString("stnumber")
+                    tvAddress.setText("$street #$street_number, $city, $cp, $country")
 
                 }
 
@@ -87,15 +89,15 @@ class MainActivity : AppCompatActivity(), LocationListener {
     override fun onResume() {
         super.onResume()
         //Check for permit
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) ==
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
             PackageManager.PERMISSION_GRANTED){
             //have permit allowed
-            gps.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0f, this)
-            onLocationChanged(gps.getLastKnownLocation(LocationManager.NETWORK_PROVIDER))
+            gps.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0f, this)
+            onLocationChanged(gps.getLastKnownLocation(LocationManager.GPS_PROVIDER))
         } else{
             //ask for permit
             ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), GPS_PERMIT)
+                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), GPS_PERMIT)
         }
     }
 
@@ -108,11 +110,11 @@ class MainActivity : AppCompatActivity(), LocationListener {
         if (requestCode == GPS_PERMIT && grantResults.isNotEmpty()) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //Granted permit
-                if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) ==
+                if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
                         PackageManager.PERMISSION_GRANTED) {
                     //have permit allowed
-                    gps.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0f, this)
-                    onLocationChanged(gps.getLastKnownLocation(LocationManager.NETWORK_PROVIDER))
+                    gps.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0f, this)
+                    onLocationChanged(gps.getLastKnownLocation(LocationManager.GPS_PROVIDER))
                 }
             } else {
                     //Show Message on how to do it
@@ -123,7 +125,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
     private fun configureGPS() {
         //create sensor gps admin
         gps = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        if(!gps.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+        if(!gps.isProviderEnabled(LocationManager.GPS_PROVIDER)){
             //open android settings
             turnOnGPS()
         }
