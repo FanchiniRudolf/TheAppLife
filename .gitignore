@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 *.zip
+Firebase_Rudolf/app/google-services.json
