@@ -3,13 +3,17 @@ package mx.itesm.rjfr.firebase_rudolf
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +25,26 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
         // Write a message to the database
-        val database = FirebaseDatabase.getInstance()
+        database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("message")
 
         myRef.setValue("Hello, World!")
+    }
+
+    fun recordData(v:View){
+        writeOnDB()
+    }
+
+    private fun writeOnDB() {
+        //Send to the cloud
+        var student_id = etID.text.toString()
+        var name = etName.text.toString()
+        var semester = etSemester.text.toString().toInt()
+        //Create object
+        var student = Student(student_id, name, semester)
+
+        var reference = database.getReference("/Students/$student_id")
+        reference.setValue(student)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
