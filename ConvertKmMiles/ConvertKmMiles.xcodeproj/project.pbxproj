@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26E411B7245A3E32003EA5BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411B6245A3E32003EA5BF /* AppDelegate.swift */; };
-		26E411B9245A3E32003EA5BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411B8245A3E32003EA5BF /* SceneDelegate.swift */; };
-		26E411BB245A3E32003EA5BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411BA245A3E32003EA5BF /* ContentView.swift */; };
-		26E411BD245A3E34003EA5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E411BC245A3E34003EA5BF /* Assets.xcassets */; };
-		26E411C0245A3E34003EA5BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E411BF245A3E34003EA5BF /* Preview Assets.xcassets */; };
-		26E411C3245A3E34003EA5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E411C1245A3E34003EA5BF /* LaunchScreen.storyboard */; };
+		26E411D7245A45A9003EA5BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411D6245A45A9003EA5BF /* AppDelegate.swift */; };
+		26E411D9245A45A9003EA5BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411D8245A45A9003EA5BF /* SceneDelegate.swift */; };
+		26E411DB245A45A9003EA5BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E411DA245A45A9003EA5BF /* ViewController.swift */; };
+		26E411DE245A45A9003EA5BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E411DC245A45A9003EA5BF /* Main.storyboard */; };
+		26E411E0245A45AA003EA5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E411DF245A45AA003EA5BF /* Assets.xcassets */; };
+		26E411E3245A45AA003EA5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E411E1245A45AA003EA5BF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26E411B3245A3E32003EA5BF /* ConverterKmMiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverterKmMiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		26E411B6245A3E32003EA5BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26E411B8245A3E32003EA5BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		26E411BA245A3E32003EA5BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		26E411BC245A3E34003EA5BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		26E411BF245A3E34003EA5BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		26E411C2245A3E34003EA5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		26E411C4245A3E34003EA5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E411D3245A45A9003EA5BF /* ConvertKmMiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertKmMiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E411D6245A45A9003EA5BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26E411D8245A45A9003EA5BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		26E411DA245A45A9003EA5BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26E411DD245A45A9003EA5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26E411DF245A45AA003EA5BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26E411E2245A45AA003EA5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26E411E4245A45AA003EA5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		26E411B0245A3E32003EA5BF /* Frameworks */ = {
+		26E411D0245A45A9003EA5BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,80 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26E411AA245A3E32003EA5BF = {
+		26E411CA245A45A9003EA5BF = {
 			isa = PBXGroup;
 			children = (
-				26E411B5245A3E32003EA5BF /* ConverterKmMiles */,
-				26E411B4245A3E32003EA5BF /* Products */,
+				26E411D5245A45A9003EA5BF /* ConvertKmMiles */,
+				26E411D4245A45A9003EA5BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		26E411B4245A3E32003EA5BF /* Products */ = {
+		26E411D4245A45A9003EA5BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26E411B3245A3E32003EA5BF /* ConverterKmMiles.app */,
+				26E411D3245A45A9003EA5BF /* ConvertKmMiles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		26E411B5245A3E32003EA5BF /* ConverterKmMiles */ = {
+		26E411D5245A45A9003EA5BF /* ConvertKmMiles */ = {
 			isa = PBXGroup;
 			children = (
-				26E411B6245A3E32003EA5BF /* AppDelegate.swift */,
-				26E411B8245A3E32003EA5BF /* SceneDelegate.swift */,
-				26E411BA245A3E32003EA5BF /* ContentView.swift */,
-				26E411BC245A3E34003EA5BF /* Assets.xcassets */,
-				26E411C1245A3E34003EA5BF /* LaunchScreen.storyboard */,
-				26E411C4245A3E34003EA5BF /* Info.plist */,
-				26E411BE245A3E34003EA5BF /* Preview Content */,
+				26E411D6245A45A9003EA5BF /* AppDelegate.swift */,
+				26E411D8245A45A9003EA5BF /* SceneDelegate.swift */,
+				26E411DA245A45A9003EA5BF /* ViewController.swift */,
+				26E411DC245A45A9003EA5BF /* Main.storyboard */,
+				26E411DF245A45AA003EA5BF /* Assets.xcassets */,
+				26E411E1245A45AA003EA5BF /* LaunchScreen.storyboard */,
+				26E411E4245A45AA003EA5BF /* Info.plist */,
 			);
-			path = ConverterKmMiles;
-			sourceTree = "<group>";
-		};
-		26E411BE245A3E34003EA5BF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				26E411BF245A3E34003EA5BF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = ConvertKmMiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		26E411B2245A3E32003EA5BF /* ConverterKmMiles */ = {
+		26E411D2245A45A9003EA5BF /* ConvertKmMiles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26E411C7245A3E34003EA5BF /* Build configuration list for PBXNativeTarget "ConverterKmMiles" */;
+			buildConfigurationList = 26E411E7245A45AA003EA5BF /* Build configuration list for PBXNativeTarget "ConvertKmMiles" */;
 			buildPhases = (
-				26E411AF245A3E32003EA5BF /* Sources */,
-				26E411B0245A3E32003EA5BF /* Frameworks */,
-				26E411B1245A3E32003EA5BF /* Resources */,
+				26E411CF245A45A9003EA5BF /* Sources */,
+				26E411D0245A45A9003EA5BF /* Frameworks */,
+				26E411D1245A45A9003EA5BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ConverterKmMiles;
-			productName = ConverterKmMiles;
-			productReference = 26E411B3245A3E32003EA5BF /* ConverterKmMiles.app */;
+			name = ConvertKmMiles;
+			productName = ConvertKmMiles;
+			productReference = 26E411D3245A45A9003EA5BF /* ConvertKmMiles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		26E411AB245A3E32003EA5BF /* Project object */ = {
+		26E411CB245A45A9003EA5BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = ITESM;
 				TargetAttributes = {
-					26E411B2245A3E32003EA5BF = {
+					26E411D2245A45A9003EA5BF = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 26E411AE245A3E32003EA5BF /* Build configuration list for PBXProject "ConverterKmMiles" */;
+			buildConfigurationList = 26E411CE245A45A9003EA5BF /* Build configuration list for PBXProject "ConvertKmMiles" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,47 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 26E411AA245A3E32003EA5BF;
-			productRefGroup = 26E411B4245A3E32003EA5BF /* Products */;
+			mainGroup = 26E411CA245A45A9003EA5BF;
+			productRefGroup = 26E411D4245A45A9003EA5BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26E411B2245A3E32003EA5BF /* ConverterKmMiles */,
+				26E411D2245A45A9003EA5BF /* ConvertKmMiles */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		26E411B1245A3E32003EA5BF /* Resources */ = {
+		26E411D1245A45A9003EA5BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E411C3245A3E34003EA5BF /* LaunchScreen.storyboard in Resources */,
-				26E411C0245A3E34003EA5BF /* Preview Assets.xcassets in Resources */,
-				26E411BD245A3E34003EA5BF /* Assets.xcassets in Resources */,
+				26E411E3245A45AA003EA5BF /* LaunchScreen.storyboard in Resources */,
+				26E411E0245A45AA003EA5BF /* Assets.xcassets in Resources */,
+				26E411DE245A45A9003EA5BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26E411AF245A3E32003EA5BF /* Sources */ = {
+		26E411CF245A45A9003EA5BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E411B7245A3E32003EA5BF /* AppDelegate.swift in Sources */,
-				26E411B9245A3E32003EA5BF /* SceneDelegate.swift in Sources */,
-				26E411BB245A3E32003EA5BF /* ContentView.swift in Sources */,
+				26E411DB245A45A9003EA5BF /* ViewController.swift in Sources */,
+				26E411D7245A45A9003EA5BF /* AppDelegate.swift in Sources */,
+				26E411D9245A45A9003EA5BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		26E411C1245A3E34003EA5BF /* LaunchScreen.storyboard */ = {
+		26E411DC245A45A9003EA5BF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				26E411C2245A3E34003EA5BF /* Base */,
+				26E411DD245A45A9003EA5BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26E411E1245A45AA003EA5BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26E411E2245A45AA003EA5BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		26E411C5245A3E34003EA5BF /* Debug */ = {
+		26E411E5245A45AA003EA5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		26E411C6245A3E34003EA5BF /* Release */ = {
+		26E411E6245A45AA003EA5BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,38 +280,34 @@
 			};
 			name = Release;
 		};
-		26E411C8245A3E34003EA5BF /* Debug */ = {
+		26E411E8245A45AA003EA5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ConverterKmMiles/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ConverterKmMiles/Info.plist;
+				INFOPLIST_FILE = ConvertKmMiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.rjfr.ConverterKmMiles;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.rjfr.ConvertKmMiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		26E411C9245A3E34003EA5BF /* Release */ = {
+		26E411E9245A45AA003EA5BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ConverterKmMiles/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ConverterKmMiles/Info.plist;
+				INFOPLIST_FILE = ConvertKmMiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.rjfr.ConverterKmMiles;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.rjfr.ConvertKmMiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26E411AE245A3E32003EA5BF /* Build configuration list for PBXProject "ConverterKmMiles" */ = {
+		26E411CE245A45A9003EA5BF /* Build configuration list for PBXProject "ConvertKmMiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26E411C5245A3E34003EA5BF /* Debug */,
-				26E411C6245A3E34003EA5BF /* Release */,
+				26E411E5245A45AA003EA5BF /* Debug */,
+				26E411E6245A45AA003EA5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26E411C7245A3E34003EA5BF /* Build configuration list for PBXNativeTarget "ConverterKmMiles" */ = {
+		26E411E7245A45AA003EA5BF /* Build configuration list for PBXNativeTarget "ConvertKmMiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26E411C8245A3E34003EA5BF /* Debug */,
-				26E411C9245A3E34003EA5BF /* Release */,
+				26E411E8245A45AA003EA5BF /* Debug */,
+				26E411E9245A45AA003EA5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 26E411AB245A3E32003EA5BF /* Project object */;
+	rootObject = 26E411CB245A45A9003EA5BF /* Project object */;
 }

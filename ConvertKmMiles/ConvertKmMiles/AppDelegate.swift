@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ConverterKmMiles
+//  ConvertKmMiles
 //
 //  Created by user167967 on 4/29/20.
 //  Copyright © 2020 ITESM. All rights reserved.
