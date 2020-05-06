@@ -23,12 +23,31 @@ class ViewController: UIViewController {
     @IBAction func convert(_ sender: Any) {
         //get data from fields
         let strKm = tfKilometers.text!
+        if !strKm.isEmpty{
         let km = Int(strKm)!
         
         let miles = Double(km)/1.6
         tfMiles.text = "\(miles)" //miles.description
+        closeKeyboard()
+        }else{
+            let alert = UIAlertController(title: "Warning", message: "You must capture KM", preferredStyle: .alert)
+            let acept = UIAlertAction(title: "Acept", style: .default)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            
+            alert.addAction(cancel)
+            alert.addAction(acept)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        closeKeyboard()
     }
 
+    func closeKeyboard(){
+        self.view.endEditing(true)
+    }
 
 }
 
