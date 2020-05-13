@@ -13,6 +13,7 @@
 		26B38D74246C9B060063ED1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B38D72246C9B060063ED1B /* Main.storyboard */; };
 		26B38D76246C9B080063ED1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B38D75246C9B080063ED1B /* Assets.xcassets */; };
 		26B38D79246C9B080063ED1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B38D77246C9B080063ED1B /* LaunchScreen.storyboard */; };
+		26B38D81246CA69C0063ED1B /* CountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B38D80246CA69C0063ED1B /* CountryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		26B38D75246C9B080063ED1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26B38D78246C9B080063ED1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26B38D7A246C9B080063ED1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B38D80246CA69C0063ED1B /* CountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country\U0010VC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				26B38D75246C9B080063ED1B /* Assets.xcassets */,
 				26B38D77246C9B080063ED1B /* LaunchScreen.storyboard */,
 				26B38D7A246C9B080063ED1B /* Info.plist */,
+				26B38D80246CA69C0063ED1B /* CountryVC.swift */,
 			);
 			path = CountryViews;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B38D81246CA69C0063ED1B /* CountryVC.swift in Sources */,
 				26B38D71246C9B060063ED1B /* ViewController.swift in Sources */,
 				26B38D6D246C9B060063ED1B /* AppDelegate.swift in Sources */,
 				26B38D6F246C9B060063ED1B /* SceneDelegate.swift in Sources */,
