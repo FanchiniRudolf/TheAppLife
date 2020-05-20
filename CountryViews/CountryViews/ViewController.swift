@@ -30,6 +30,12 @@ class ViewController: UIViewController {
         }
     }
     
+    //Stop from transitioning
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let index = table.indexPathForSelectedRow!.row
+        return countryArr[index] != "Estados Unidos"
+    }
+    
 
 
 }

@@ -81,18 +81,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9g-Gw-bdD">
+                                <rect key="frame" x="10" y="127" width="394" height="725"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="CyD-b2-tT8">
+                                <rect key="frame" x="197" y="431" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Tus-NV-BKg" firstAttribute="bottom" secondItem="y9g-Gw-bdD" secondAttribute="bottom" constant="10" id="378-Te-Wyu"/>
+                            <constraint firstItem="y9g-Gw-bdD" firstAttribute="leading" secondItem="Tus-NV-BKg" secondAttribute="leading" constant="10" id="FlA-04-S8f"/>
                             <constraint firstItem="d7i-MV-xvu" firstAttribute="leading" secondItem="Tus-NV-BKg" secondAttribute="leading" constant="20" id="KL0-lq-dTq"/>
                             <constraint firstItem="Tus-NV-BKg" firstAttribute="trailing" secondItem="d7i-MV-xvu" secondAttribute="trailing" constant="20" id="RUX-9S-pON"/>
+                            <constraint firstItem="y9g-Gw-bdD" firstAttribute="top" secondItem="d7i-MV-xvu" secondAttribute="bottom" constant="10" id="TrY-fk-cs1"/>
+                            <constraint firstItem="Tus-NV-BKg" firstAttribute="trailing" secondItem="y9g-Gw-bdD" secondAttribute="trailing" constant="10" id="dmv-CS-zwH"/>
                             <constraint firstItem="d7i-MV-xvu" firstAttribute="top" secondItem="Tus-NV-BKg" secondAttribute="top" constant="8" id="wuZ-6m-KGP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tus-NV-BKg"/>
                     </view>
                     <navigationItem key="navigationItem" id="vpj-pS-idV"/>
                     <connections>
+                        <outlet property="actWait" destination="CyD-b2-tT8" id="E5N-sz-2QX"/>
                         <outlet property="lblCountry" destination="d7i-MV-xvu" id="VLc-rj-NfT"/>
+                        <outlet property="webCountry" destination="y9g-Gw-bdD" id="mRR-fP-0WM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tao-wZ-Xdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
