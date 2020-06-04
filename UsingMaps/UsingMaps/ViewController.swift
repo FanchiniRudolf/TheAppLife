@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         menu = CPMenuView(parentView: self.view, homeButton: btnMenu, animator: animator, type: .all, isClockWise: true)
         menu.delegate = self
         menu.datasource = self
-        menu.setHomeButtonPosition(position: CGPoint(x: self.view.center.x-100, y: self.view.frame.height-100))
+        menu.setHomeButtonPosition(position: CGPoint(x: self.view.center.x-50, y: self.view.frame.height-150))
     }
     
         
