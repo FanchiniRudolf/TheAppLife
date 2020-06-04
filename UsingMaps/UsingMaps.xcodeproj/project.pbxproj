@@ -15,13 +15,13 @@
 		26191B37247F1C1300750955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26191B35247F1C1300750955 /* LaunchScreen.storyboard */; };
 		26191B40247F1C5B00750955 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26191B3F247F1C5B00750955 /* CoreLocation.framework */; };
 		26191B42247F1C6500750955 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26191B41247F1C6500750955 /* MapKit.framework */; };
-		26F3BBBA24883430000561F3 /* CPMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3BBB324883430000561F3 /* CPMenuAnimator.swift */; };
-		26F3BBBB24883430000561F3 /* CPMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3BBB424883430000561F3 /* CPMenuView.swift */; };
-		26F3BBBC24883430000561F3 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBB524883430000561F3 /* 2.png */; };
-		26F3BBBD24883430000561F3 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBB624883430000561F3 /* 3.png */; };
-		26F3BBBE24883430000561F3 /* CPMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3BBB724883430000561F3 /* CPMenuButton.swift */; };
-		26F3BBBF24883430000561F3 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBB824883430000561F3 /* 1.png */; };
-		26F3BBC024883430000561F3 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBB924883430000561F3 /* 0.png */; };
+		26DAB2FA2489666100045F7B /* CPMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB2F32489666100045F7B /* CPMenuAnimator.swift */; };
+		26DAB2FB2489666100045F7B /* CPMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB2F42489666100045F7B /* CPMenuView.swift */; };
+		26DAB2FC2489666100045F7B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DAB2F52489666100045F7B /* 2.png */; };
+		26DAB2FD2489666100045F7B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DAB2F62489666100045F7B /* 3.png */; };
+		26DAB2FE2489666100045F7B /* CPMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB2F72489666100045F7B /* CPMenuButton.swift */; };
+		26DAB2FF2489666100045F7B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DAB2F82489666100045F7B /* 1.png */; };
+		26DAB3002489666100045F7B /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DAB2F92489666100045F7B /* 0.png */; };
 		26F3BBC82488344E000561F3 /* linux.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBC22488344C000561F3 /* linux.png */; };
 		26F3BBC92488344E000561F3 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBC32488344C000561F3 /* close.png */; };
 		26F3BBCA2488344E000561F3 /* pac-man.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3BBC42488344C000561F3 /* pac-man.png */; };
@@ -41,13 +41,13 @@
 		26191B38247F1C1300750955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26191B3F247F1C5B00750955 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		26191B41247F1C6500750955 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		26F3BBB324883430000561F3 /* CPMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuAnimator.swift; sourceTree = "<group>"; };
-		26F3BBB424883430000561F3 /* CPMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuView.swift; sourceTree = "<group>"; };
-		26F3BBB524883430000561F3 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		26F3BBB624883430000561F3 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		26F3BBB724883430000561F3 /* CPMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuButton.swift; sourceTree = "<group>"; };
-		26F3BBB824883430000561F3 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		26F3BBB924883430000561F3 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		26DAB2F32489666100045F7B /* CPMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuAnimator.swift; sourceTree = "<group>"; };
+		26DAB2F42489666100045F7B /* CPMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuView.swift; sourceTree = "<group>"; };
+		26DAB2F52489666100045F7B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		26DAB2F62489666100045F7B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		26DAB2F72489666100045F7B /* CPMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPMenuButton.swift; sourceTree = "<group>"; };
+		26DAB2F82489666100045F7B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		26DAB2F92489666100045F7B /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		26F3BBC22488344C000561F3 /* linux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linux.png; sourceTree = "<group>"; };
 		26F3BBC32488344C000561F3 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		26F3BBC42488344C000561F3 /* pac-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pac-man.png"; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		26191B29247F1C1200750955 /* UsingMaps */ = {
 			isa = PBXGroup;
 			children = (
+				26DAB2F22489666100045F7B /* CPMenu */,
 				26F3BBC124883436000561F3 /* Images */,
-				26F3BBB224883430000561F3 /* CPMenu */,
 				26191B2A247F1C1200750955 /* AppDelegate.swift */,
 				26191B2C247F1C1200750955 /* SceneDelegate.swift */,
 				26191B2E247F1C1200750955 /* ViewController.swift */,
@@ -111,16 +111,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		26F3BBB224883430000561F3 /* CPMenu */ = {
+		26DAB2F22489666100045F7B /* CPMenu */ = {
 			isa = PBXGroup;
 			children = (
-				26F3BBB324883430000561F3 /* CPMenuAnimator.swift */,
-				26F3BBB424883430000561F3 /* CPMenuView.swift */,
-				26F3BBB524883430000561F3 /* 2.png */,
-				26F3BBB624883430000561F3 /* 3.png */,
-				26F3BBB724883430000561F3 /* CPMenuButton.swift */,
-				26F3BBB824883430000561F3 /* 1.png */,
-				26F3BBB924883430000561F3 /* 0.png */,
+				26DAB2F32489666100045F7B /* CPMenuAnimator.swift */,
+				26DAB2F42489666100045F7B /* CPMenuView.swift */,
+				26DAB2F52489666100045F7B /* 2.png */,
+				26DAB2F62489666100045F7B /* 3.png */,
+				26DAB2F72489666100045F7B /* CPMenuButton.swift */,
+				26DAB2F82489666100045F7B /* 1.png */,
+				26DAB2F92489666100045F7B /* 0.png */,
 			);
 			name = CPMenu;
 			path = ../../../../../Desktop/MenuCircular/CPMenu;
@@ -197,17 +197,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DAB2FD2489666100045F7B /* 3.png in Resources */,
 				26F3BBC92488344E000561F3 /* close.png in Resources */,
-				26F3BBBD24883430000561F3 /* 3.png in Resources */,
 				26191B37247F1C1300750955 /* LaunchScreen.storyboard in Resources */,
+				26DAB2FC2489666100045F7B /* 2.png in Resources */,
 				26191B34247F1C1300750955 /* Assets.xcassets in Resources */,
-				26F3BBC024883430000561F3 /* 0.png in Resources */,
 				26F3BBCD2488344E000561F3 /* pokemon.png in Resources */,
 				26F3BBC82488344E000561F3 /* linux.png in Resources */,
-				26F3BBBF24883430000561F3 /* 1.png in Resources */,
-				26F3BBBC24883430000561F3 /* 2.png in Resources */,
 				26F3BBCC2488344E000561F3 /* menu.png in Resources */,
 				26F3BBCB2488344E000561F3 /* people.png in Resources */,
+				26DAB2FF2489666100045F7B /* 1.png in Resources */,
+				26DAB3002489666100045F7B /* 0.png in Resources */,
 				26191B32247F1C1200750955 /* Main.storyboard in Resources */,
 				26F3BBCA2488344E000561F3 /* pac-man.png in Resources */,
 			);
@@ -222,10 +222,10 @@
 			files = (
 				26191B2F247F1C1200750955 /* ViewController.swift in Sources */,
 				26191B2B247F1C1200750955 /* AppDelegate.swift in Sources */,
-				26F3BBBA24883430000561F3 /* CPMenuAnimator.swift in Sources */,
-				26F3BBBE24883430000561F3 /* CPMenuButton.swift in Sources */,
+				26DAB2FA2489666100045F7B /* CPMenuAnimator.swift in Sources */,
+				26DAB2FE2489666100045F7B /* CPMenuButton.swift in Sources */,
 				26191B2D247F1C1200750955 /* SceneDelegate.swift in Sources */,
-				26F3BBBB24883430000561F3 /* CPMenuView.swift in Sources */,
+				26DAB2FB2489666100045F7B /* CPMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
