@@ -13,7 +13,7 @@ import MapKit
 
 class ViewController: UIViewController {
     
-    let arrImages = ["linux", "people", "pac-man", "pokemon"]
+    let arrImages = ["linux", "pac-man", "pokemon"]
     
     @IBOutlet weak var map: MKMapView!
     let gps = CLLocationManager()
@@ -37,44 +37,42 @@ class ViewController: UIViewController {
         menu = CPMenuView(parentView: self.view, homeButton: btnMenu, animator: animator, type: .all, isClockWise: true)
         menu.delegate = self
         menu.datasource = self
-        menu.setHomeButtonPosition(position: CGPoint(x: self.view.center.x, y: self.view.frame.height-180))
+        menu.setHomeButtonPosition(position: CGPoint(x: self.view.center.x-100, y: self.view.frame.height-100))
     }
     
-    @IBAction func changeTraffic(_ sender: Any) {
-        map.showsTraffic = !map.showsTraffic
-    }
-    @IBAction func showFoodPlaces(_ sender: Any) {
-        if showingRestaurants {
-            self.map.removeAnnotations(self.map.annotations)
-            showingRestaurants = !showingRestaurants
-        }else{
-            let request = MKLocalSearch.Request()
-            request.naturalLanguageQuery = "Restaurant"
-            request.region = map.region
-            
-            let search = MKLocalSearch(request: request)
-            
-            search.start(completionHandler: {(response, error)in
-                if error != nil{
-                    print("Error ocurred in search : \(error!.localizedDescription)")
-                }else if response!.mapItems.count == 0 {
-                    print("No matches found")
-                }else{
-                    print("Matches found")
-                    for item in response!.mapItems {
-                        let foodPlace = CLLocationCoordinate2DMake(item.placemark.coordinate.latitude, item.placemark.coordinate.longitude)
-                        let pin = MKPointAnnotation()
-                        pin.coordinate = foodPlace
-                        pin.title = item.name
-                        self.map.addAnnotation(pin)
+        
+        func switchFood(){
+            if showingRestaurants {
+                self.map.removeAnnotations(self.map.annotations)
+                showingRestaurants = !showingRestaurants
+            }else{
+                let request = MKLocalSearch.Request()
+                request.naturalLanguageQuery = "Restaurant"
+                request.region = map.region
+                
+                let search = MKLocalSearch(request: request)
+                
+                search.start(completionHandler: {(response, error)in
+                    if error != nil{
+                        print("Error ocurred in search : \(error!.localizedDescription)")
+                    }else if response!.mapItems.count == 0 {
+                        print("No matches found")
+                    }else{
+                        print("Matches found")
+                        for item in response!.mapItems {
+                            let foodPlace = CLLocationCoordinate2DMake(item.placemark.coordinate.latitude, item.placemark.coordinate.longitude)
+                            let pin = MKPointAnnotation()
+                            pin.coordinate = foodPlace
+                            pin.title = item.name
+                            self.map.addAnnotation(pin)
+                        }
                     }
-                }
-            })
-            showingRestaurants = !showingRestaurants
+                })
+                showingRestaurants = !showingRestaurants
         }
         
-        
     }
+    
     func configureMap (){
         map.delegate = self
         gps.delegate = self
@@ -91,12 +89,26 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func changeAboutScreen(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyBoard.instantiateViewController(withIdentifier: "aboutScreen")
+        
+        self.present(secondViewController, animated: true, completion: nil)
+    }
 
 }
 
 extension ViewController: CPMenuViewDelegate, CPMenuViewDataSource{
     func menuView(_ menuView: CPMenuView, didSelectButtonAtIndex index: Int) {
         print("Selecciono \(index)")
+        if index == 0{
+            switchFood()
+        }else if index == 1{
+            map.showsTraffic.toggle()
+        }else if index == 2{
+            changeAboutScreen()
+        }
     }
     
     func menuView(_ menuView: CPMenuView, didSelectHomeButtonState state: CPMenuViewState) {

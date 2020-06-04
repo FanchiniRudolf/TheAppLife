@@ -12,51 +12,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UsingMaps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-Nt-60D">
-                                <rect key="frame" x="8" y="52" width="398" height="29"/>
+                                <rect key="frame" x="8" y="8" width="398" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVk-7X-SWY">
-                                <rect key="frame" x="8" y="89" width="398" height="765"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVk-7X-SWY">
+                                <rect key="frame" x="8" y="45" width="398" height="755"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf5-xL-TCB">
-                                <rect key="frame" x="8" y="824" width="44" height="30"/>
-                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Traffic"/>
-                                <connections>
-                                    <action selector="changeTraffic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwx-PY-X6v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-qw-qPF">
-                                <rect key="frame" x="166" y="824" width="82" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Restaurants"/>
-                                <connections>
-                                    <action selector="showFoodPlaces:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7n-nw-KRM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8ur-Nt-60D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="1Zf-6p-0iu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KVk-7X-SWY" secondAttribute="trailing" constant="8" id="3LA-pq-baD"/>
                             <constraint firstItem="KVk-7X-SWY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5rk-oK-Rl6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pf5-xL-TCB" secondAttribute="bottom" constant="8" id="5wI-uF-VWX"/>
-                            <constraint firstItem="Pf5-xL-TCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="BkM-NM-BDr"/>
-                            <constraint firstItem="fjk-qw-qPF" firstAttribute="centerX" secondItem="KVk-7X-SWY" secondAttribute="centerX" id="E9M-aQ-Hn9"/>
                             <constraint firstItem="8ur-Nt-60D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Ft1-n9-OQA"/>
                             <constraint firstItem="KVk-7X-SWY" firstAttribute="top" secondItem="8ur-Nt-60D" secondAttribute="bottom" constant="8" id="KHY-HQ-grH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KVk-7X-SWY" secondAttribute="bottom" constant="8" id="LQP-yL-u3F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fjk-qw-qPF" secondAttribute="bottom" constant="8" id="hcg-Qa-JS7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ur-Nt-60D" secondAttribute="trailing" constant="8" id="mrd-cO-qPe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sRJ-TL-cos"/>
                     <connections>
                         <outlet property="map" destination="KVk-7X-SWY" id="F2w-W7-eJb"/>
                     </connections>
@@ -64,6 +45,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1546" y="147"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xLa-4Q-GEk">
+            <objects>
+                <viewController storyboardIdentifier="aboutScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bhs-v4-21F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8XS-ci-8e2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3di-9l-SLi">
+                                <rect key="frame" x="117" y="397" width="180" height="102"/>
+                                <string key="text">AboutMaps Practice AppDeveloper: Rudolf Fanchini</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-yA-t4e">
+                                <rect key="frame" x="184" y="753" width="79" height="60"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Xn6-T6-Ldt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g8x-KL-82S" firstAttribute="trailing" secondItem="ZJx-yA-t4e" secondAttribute="trailing" constant="184" id="8a3-Ny-L0i"/>
+                            <constraint firstItem="ZJx-yA-t4e" firstAttribute="leading" secondItem="g8x-KL-82S" secondAttribute="leading" constant="184" id="CTp-tl-VJI"/>
+                            <constraint firstItem="g8x-KL-82S" firstAttribute="bottom" secondItem="ZJx-yA-t4e" secondAttribute="bottom" constant="49" id="G0a-Pn-cQX"/>
+                            <constraint firstItem="3di-9l-SLi" firstAttribute="centerX" secondItem="g8x-KL-82S" secondAttribute="centerX" id="pUn-oW-CZK"/>
+                            <constraint firstItem="3di-9l-SLi" firstAttribute="centerY" secondItem="g8x-KL-82S" secondAttribute="centerY" id="xlY-59-KZY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8x-KL-82S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C58-xM-1ca"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reN-0T-Pyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768.11594202898561" y="146.65178571428569"/>
         </scene>
     </scenes>
 </document>
